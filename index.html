@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sunday 22 November 2026 — The World in One Day</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  html,body { width:1024px; height:1024px; }
+  body {
+    background:#f8f3e4; color:#182238;
+    font-family: Georgia, 'Times New Roman', 'DejaVu Serif', serif;
+    padding: 18px 24px 12px 24px;
+    overflow:hidden;
+  }
+  .sans { font-family: 'DejaVu Sans', 'Segoe UI', Arial, sans-serif; }
+  /* top bar */
+  .topbar {
+    background:#10182c; color:#f8f3e4; display:flex; justify-content:space-between; align-items:center;
+    padding:5px 12px; font-size:12.5px; letter-spacing:2.5px; font-weight:bold;
+  }
+  .topbar .r { letter-spacing:1.6px; font-weight:normal; font-size:11.5px; }
+  /* masthead */
+  h1.mast {
+    text-align:center; font-size:54px; font-weight:900; letter-spacing:.5px;
+    margin:5px 0 1px 0; color:#10182c; line-height:1.02;
+  }
+  .kicker {
+    text-align:center; color:#b3202c; font-style:italic; font-size:16.5px; margin-bottom:7px;
+  }
+  /* stat strip */
+  .stats { display:flex; border-top:3px solid #10182c; border-bottom:1.5px solid #10182c; padding:5px 0 4px 0; }
+  .stat { flex:1; text-align:center; border-right:1px solid #c9c0a6; }
+  .stat:last-child { border-right:none; }
+  .stat b { display:block; font-size:25px; font-weight:900; color:#10182c; line-height:1; }
+  .stat span { display:block; font-size:9.3px; color:#5a5340; margin-top:2px; letter-spacing:.3px; }
+  /* region tabs */
+  .tabs { display:flex; gap:5px; margin:7px 0 6px 0; }
+  .tab { flex:1; text-align:center; color:#fff; font-size:10.5px; font-weight:bold; letter-spacing:1.2px; padding:3.5px 0; }
+  .tab i { font-style:normal; opacity:.85; font-weight:normal; }
+  /* timeline */
+  .tl { background:#24304f; color:#e9e2cd; font-size:10.8px; padding:4px 10px; display:flex; gap:9px; align-items:center; white-space:nowrap; overflow:hidden; }
+  .tl b { color:#fff; letter-spacing:1.2px; font-size:10.5px; }
+  .tl .dot { color:#8fa1c7; }
+  .tl .tm { color:#f0b429; font-weight:bold; }
+  /* heroes */
+  .heroes { display:flex; gap:12px; margin-top:7px; }
+  .hero { flex:1; }
+  .hero .scene { position:relative; height:112px; overflow:hidden; }
+  .hero .scene svg { display:block; }
+  .tag { position:absolute; top:6px; left:6px; background:#b3202c; color:#fff; font-size:9.5px; font-weight:bold; letter-spacing:1px; padding:2px 6px; }
+  .tag.r { left:auto; right:6px; background:#10182c; }
+  .hero .num { color:#b3202c; font-weight:900; font-size:12px; margin-top:5px; }
+  .hero .num .loc { color:#182238; letter-spacing:.6px; }
+  .hero .num .cert { float:right; color:#8a7f5c; font-size:9px; letter-spacing:1px; }
+  .hero h2 { font-size:18px; line-height:1.12; font-weight:900; margin:1px 0 3px 0; }
+  .hero p { font-size:10.4px; line-height:1.27; color:#33301f; }
+  /* grid panels */
+  .grid { display:grid; grid-template-columns:repeat(4,1fr); gap:7px 12px; margin-top:8px; }
+  .panel .scene { height:29px; overflow:hidden; position:relative; }
+  .panel .tag2 { position:absolute; top:3px; right:4px; background:#10182c; color:#fff; font-size:8px; font-weight:bold; padding:1px 4px; letter-spacing:.5px; }
+  .panel .num { color:#b3202c; font-weight:900; font-size:10.5px; margin-top:3px; }
+  .panel .num .loc { color:#182238; letter-spacing:.4px; }
+  .panel .num .cert { float:right; color:#8a7f5c; font-size:8px; letter-spacing:.8px; }
+  .panel h3 { font-size:12.6px; line-height:1.14; font-weight:900; margin:1px 0 2px 0; }
+  .panel p { font-size:9.3px; line-height:1.28; color:#3a3627; }
+  /* bottom */
+  .bottom { display:flex; gap:14px; margin-top:8px; border-top:2.5px solid #10182c; padding-top:7px; }
+  .mapbox { width:342px; }
+  .mapbox h4, .alsobox h4 { font-size:11px; letter-spacing:1.6px; color:#10182c; margin-bottom:3px; }
+  .mapbox h4 span { color:#8a7f5c; letter-spacing:.4px; font-size:9px; float:right; margin-top:1px; }
+  .also { columns:2; column-gap:16px; font-size:9.2px; line-height:1.29; color:#33301f; }
+  .also b { color:#b3202c; }
+  .also .n { color:#b3202c; font-weight:900; }
+  .also .rg { color:#10182c; font-weight:bold; }
+  .datecheck { border:1.6px solid #b3202c; padding:5px 9px; margin-top:7px; font-size:9.4px; line-height:1.3; color:#33301f; display:flex; gap:10px; }
+  .datecheck b { color:#b3202c; letter-spacing:1px; white-space:nowrap; }
+  .footer { display:flex; justify-content:space-between; margin-top:7px; font-size:8.8px; color:#6b6249; border-top:1px solid #c9c0a6; padding-top:4px; }
+  .footer b { color:#10182c; letter-spacing:1.6px; }
+</style>
+</head>
+<body>
+
+<div class="topbar sans"><div>THE WORLD IN ONE DAY</div><div class="r">30 STORIES &middot; 7 REGIONS &middot; EVERY ONE DATED SUNDAY 22 NOVEMBER 2026</div></div>
+
+<h1 class="mast">Sunday 22 November 2026</h1>
+<div class="kicker">186 drones over Ukraine in the night &middot; COP31 ends with no deal &middot; Iran&rsquo;s radar claim meets Bahrain&rsquo;s denial</div>
+
+<div class="stats sans">
+  <div class="stat"><b>186</b><span>drones fired at Ukraine overnight</span></div>
+  <div class="stat"><b>161</b><span>downed or suppressed by air defence</span></div>
+  <div class="stat"><b>0</b><span>deals adopted at COP31, a first in years</span></div>
+  <div class="stat"><b>720/9</b><span>India&rsquo;s record Test total in NZ</span></div>
+  <div class="stat"><b>98.37%</b><span>Hong Kong poll turnout by 5 pm</span></div>
+  <div class="stat"><b>50</b><span>Wembanyama points, 19 rebounds</span></div>
+</div>
+
+<div class="tabs sans">
+  <div class="tab" style="background:#8a3324">EUROPE <i>6</i></div>
+  <div class="tab" style="background:#b3202c">MIDDLE EAST <i>5</i></div>
+  <div class="tab" style="background:#2e5e4e">AMERICAS <i>7</i></div>
+  <div class="tab" style="background:#31597f">ASIA-PACIFIC <i>7</i></div>
+  <div class="tab" style="background:#7a5c14">AFRICA <i>2</i></div>
+  <div class="tab" style="background:#5b4a8a">OCEANIA <i>2</i></div>
+  <div class="tab" style="background:#44484f">WORLD <i>1</i></div>
+</div>
+
+<div class="tl sans"><b>THE DAY IN UTC</b><span><span class="tm">01:00</span> HK polls open</span><span class="dot">&middot;</span><span><span class="tm">03:00</span> COP31 objections close</span><span class="dot">&middot;</span><span><span class="tm">05:11</span> Hamas seeks talks</span><span class="dot">&middot;</span><span><span class="tm">05:30</span> Verstappen wins Vegas</span><span class="dot">&middot;</span><span><span class="tm">06:00</span> COP31 deal due</span><span class="dot">&middot;</span><span><span class="tm">07:30</span> Deal slips</span></div>
+
+<div class="heroes">
+  <!-- 1 DRONES -->
+  <div class="hero">
+    <div class="scene">
+      <svg width="317" height="112" viewBox="0 10 317 112">
+        <rect width="317" height="138" fill="#131c33"/>
+        <circle cx="30" cy="18" r="1.6" fill="#e9e2cd"/><circle cx="80" cy="10" r="1.2" fill="#e9e2cd"/><circle cx="150" cy="22" r="1.4" fill="#e9e2cd"/><circle cx="230" cy="12" r="1.2" fill="#e9e2cd"/><circle cx="290" cy="26" r="1.6" fill="#e9e2cd"/><circle cx="120" cy="34" r="1" fill="#e9e2cd"/><circle cx="200" cy="36" r="1" fill="#e9e2cd"/><circle cx="55" cy="40" r="1" fill="#e9e2cd"/>
+        <!-- drones -->
+        <g fill="#0a0f1e" stroke="#46598a" stroke-width="1">
+          <path d="M52 44 l7 -7 M52 44 l-7 -7 M52 44 l7 7 M52 44 l-7 7" /><circle cx="52" cy="44" r="3.4"/>
+          <path d="M108 30 l6 -6 M108 30 l-6 -6 M108 30 l6 6 M108 30 l-6 6" /><circle cx="108" cy="30" r="3"/>
+          <path d="M168 48 l6 -6 M168 48 l-6 -6 M168 48 l6 6 M168 48 l-6 6" /><circle cx="168" cy="48" r="3"/>
+          <path d="M226 26 l5 -5 M226 26 l-5 -5 M226 26 l5 5 M226 26 l-5 5" /><circle cx="226" cy="26" r="2.6"/>
+        </g>
+        <!-- searchlight -->
+        <polygon points="286,138 236,52 262,44" fill="#f5e9b8" opacity="0.35"/>
+        <!-- building -->
+        <g>
+          <rect x="30" y="76" width="86" height="62" fill="#26355c"/>
+          <g fill="#f0b429"><rect x="40" y="86" width="9" height="11"/><rect x="58" y="86" width="9" height="11"/><rect x="76" y="86" width="9" height="11"/><rect x="40" y="106" width="9" height="11"/><rect x="76" y="106" width="9" height="11"/><rect x="40" y="124" width="9" height="11"/><rect x="58" y="124" width="9" height="11"/></g>
+          <g fill="#10182c"><rect x="94" y="86" width="9" height="11"/><rect x="94" y="106" width="9" height="11"/><rect x="94" y="124" width="9" height="11"/><rect x="58" y="106" width="9" height="11"/></g>
+          <!-- collapsed section -->
+          <path d="M116 76 L150 92 L146 138 L116 138 Z" fill="#3d3a33"/>
+          <path d="M122 100 l16 6 M126 118 l14 5" stroke="#191713" stroke-width="3"/>
+        </g>
+        <rect x="0" y="136" width="317" height="2" fill="#0a0f1e"/>
+      </svg>
+      <div class="tag sans">186 DRONES OVERNIGHT</div><div class="tag r sans">161 DOWNED</div>
+    </div>
+    <div class="num sans">1 <span class="loc">KYIV REGION, UKRAINE &middot; WAR</span><span class="cert">REPORTED</span></div>
+    <h2>Russia fires 186 drones; a Kyiv-region block is destroyed</h2>
+    <p>Air defences downed or suppressed 161 of 186 strike drones (72 of them jet-powered) fired from eight directions. One destroyed a five-storey block in Dymer: rescuers searched the rubble for people still trapped. (Ukrainian Air Force via Reuters)</p>
+  </div>
+
+  <!-- 2 COP31 -->
+  <div class="hero">
+    <div class="scene">
+      <svg width="317" height="112" viewBox="0 10 317 112">
+        <rect width="317" height="138" fill="#bcd3c9"/>
+        <rect y="96" width="317" height="42" fill="#7fa393"/>
+        <!-- document -->
+        <g><rect x="18" y="14" width="52" height="66" fill="#fdfcf6" stroke="#31597f" stroke-width="1.6"/><line x1="26" y1="28" x2="62" y2="28" stroke="#9db3c8" stroke-width="3"/><line x1="26" y1="38" x2="62" y2="38" stroke="#9db3c8" stroke-width="3"/><line x1="26" y1="48" x2="52" y2="48" stroke="#9db3c8" stroke-width="3"/><line x1="26" y1="60" x2="62" y2="60" stroke="#c8cfd6" stroke-width="3"/></g>
+        <!-- clock -->
+        <g><circle cx="272" cy="42" r="25" fill="#fdfcf6" stroke="#10182c" stroke-width="2.4"/><line x1="272" y1="42" x2="272" y2="25" stroke="#10182c" stroke-width="2.6"/><line x1="272" y1="42" x2="286" y2="50" stroke="#b3202c" stroke-width="2.6"/><circle cx="272" cy="42" r="2.6" fill="#10182c"/></g>
+        <!-- table + delegates -->
+        <rect x="52" y="102" width="214" height="12" fill="#5d4630"/>
+        <g fill="#26355c"><circle cx="76" cy="86" r="8"/><circle cx="112" cy="86" r="8"/><circle cx="148" cy="86" r="8"/><circle cx="184" cy="86" r="8"/><circle cx="220" cy="86" r="8"/></g>
+        <g fill="#26355c"><rect x="66" y="93" width="20" height="10"/><rect x="102" y="93" width="20" height="10"/><rect x="138" y="93" width="20" height="10"/><rect x="174" y="93" width="20" height="10"/><rect x="210" y="93" width="20" height="10"/></g>
+        <!-- NO DEAL stamp -->
+        <g transform="rotate(-13 160 45)"><rect x="103" y="30" width="116" height="30" fill="none" stroke="#b3202c" stroke-width="3.4"/><text x="161" y="52" text-anchor="middle" font-family="DejaVu Sans, Arial" font-weight="bold" font-size="19" fill="#b3202c" letter-spacing="2">NO DEAL</text></g>
+      </svg>
+      <div class="tag sans">COP31: FINAL TEXT</div><div class="tag r sans">NO FOSSIL FUELS</div>
+    </div>
+    <div class="num sans">2 <span class="loc">ANTALYA, T&Uuml;RKIYE &middot; CLIMATE</span><span class="cert">REPORTED</span></div>
+    <h2>COP31 ends with no deal over fossil fuels</h2>
+    <p>The longest climate summit on record closed without adopting its main text: the final draft never named fossil fuels, and the EU and UK refused to endorse it. The chair conceded there was no agreement. (Reuters, BBC, AP)</p>
+  </div>
+
+  <!-- 3 IRAN / BAHRAIN -->
+  <div class="hero">
+    <div class="scene">
+      <svg width="317" height="112" viewBox="0 10 317 112">
+        <rect width="317" height="80" fill="#d9a05f"/>
+        <rect y="80" width="317" height="58" fill="#7d94a6"/>
+        <!-- far shore tanks with fire -->
+        <g><rect x="196" y="58" width="34" height="22" fill="#5c5348"/><rect x="238" y="52" width="40" height="28" fill="#4c463e"/><rect x="284" y="60" width="28" height="20" fill="#5c5348"/></g>
+        <g fill="#e2703a"><path d="M246 52 q5 -14 2 -22 q10 8 8 22 Z"/><path d="M262 52 q4 -10 2 -16 q8 6 6 16 Z"/></g>
+        <g fill="#f0b429"><path d="M250 52 q3 -8 1 -12 q6 4 5 12 Z"/></g>
+        <g fill="#3a3627" opacity="0.55"><ellipse cx="252" cy="18" rx="16" ry="6"/><ellipse cx="272" cy="10" rx="12" ry="5"/></g>
+        <!-- radar trucks near shore -->
+        <g><rect x="26" y="96" width="46" height="16" fill="#44543c"/><rect x="34" y="84" width="26" height="12" fill="#526348"/><circle cx="38" cy="114" r="6" fill="#10182c"/><circle cx="62" cy="114" r="6" fill="#10182c"/><g stroke="#2c3a26" stroke-width="2.4"><line x1="47" y1="84" x2="30" y2="62"/><line x1="47" y1="84" x2="64" y2="62"/></g><ellipse cx="47" cy="58" rx="20" ry="5" fill="none" stroke="#2c3a26" stroke-width="2.4"/></g>
+        <g><rect x="104" y="100" width="40" height="13" fill="#44543c"/><circle cx="114" cy="115" r="5.4" fill="#10182c"/><circle cx="134" cy="115" r="5.4" fill="#10182c"/><g stroke="#2c3a26" stroke-width="2.2"><line x1="124" y1="100" x2="110" y2="80"/><line x1="124" y1="100" x2="138" y2="80"/></g><ellipse cx="124" cy="76" rx="17" ry="4.4" fill="none" stroke="#2c3a26" stroke-width="2.2"/></g>
+      </svg>
+      <div class="tag sans">CLAIM VS DENIAL</div><div class="tag r sans">2 RADARS?</div>
+    </div>
+    <div class="num sans">3 <span class="loc">MANAMA, BAHRAIN &middot; IRAN</span><span class="cert">CLAIM</span></div>
+    <h2>Iran claims two US radars hit; Bahrain denies it</h2>
+    <p>The IRGC says it destroyed two Patriot radars on Saturday night. Bahrain&rsquo;s foreign ministry answered on Sunday: the target was a civilian industrial site &mdash; a fire, no injuries &mdash; and a violation of its sovereignty. (Khaleej Times, Al Jazeera)</p>
+  </div>
+</div>
+
+<div class="grid">
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#dce4ec"/><rect y="29" width="235" height="8" fill="#8fa1b5"/><g fill="#31597f"><rect x="18" y="10" width="34" height="19"/><rect x="60" y="6" width="26" height="23"/></g><g fill="#f8f3e4"><rect x="24" y="15" width="5" height="6"/><rect x="34" y="15" width="5" height="6"/><rect x="66" y="11" width="5" height="6"/><rect x="76" y="11" width="5" height="6"/></g><rect x="150" y="14" width="52" height="15" fill="#b3202c"/><rect x="168" y="8" width="16" height="7" fill="#7d1620"/><circle cx="176" cy="21" r="3.4" fill="#f8f3e4"/></svg><div class="tag2 sans">856 CANDIDATES</div></div>
+    <div class="num sans">4 <span class="loc">HONG KONG &middot; ELECTION</span><span class="cert">REPORTED</span></div>
+    <h3>Hong Kong elects its Election Committee</h3>
+    <p>856 candidates, 723 seats, 5,700 voters; polls 09:00&ndash;18:00. (SCMP)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#cfe3c2"/><rect y="26" width="235" height="11" fill="#7fae62"/><rect x="96" y="24" width="42" height="4" fill="#d9c08a"/><g stroke="#8a6b32" stroke-width="2"><line x1="104" y1="14" x2="104" y2="24"/><line x1="112" y1="14" x2="112" y2="24"/><line x1="120" y1="14" x2="120" y2="24"/></g><path d="M168 6 l14 20 l-5 3 l-14 -20 Z" fill="#8a6b32"/><circle cx="60" cy="18" r="4.4" fill="#b3202c"/></svg><div class="tag2 sans">720/9 DECLARED</div></div>
+    <div class="num sans">5 <span class="loc">WELLINGTON &middot; CRICKET</span><span class="cert">REPORTED</span></div>
+    <h3>India declare on 720/9, a record in New Zealand</h3>
+    <p>Rahul 156, Pant 128, Gill 119; hosts 119/2, trailing by 233. (ESPN)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#1d2440"/><g fill="#f0b429"><circle cx="30" cy="9" r="1.6"/><circle cx="90" cy="6" r="1.3"/><circle cx="160" cy="10" r="1.5"/><circle cx="210" cy="7" r="1.3"/></g><rect y="29" width="235" height="8" fill="#39406b"/><path d="M52 26 l10 -8 h44 l14 8 h22 l4 6 h-14 a7 7 0 0 0 -14 0 h-34 a7 7 0 0 0 -14 0 h-14 Z" fill="#c22430"/><circle cx="70" cy="32" r="5" fill="#0c0f1c"/><circle cx="118" cy="32" r="5" fill="#0c0f1c"/><rect x="88" y="12" width="18" height="6" fill="#7d1620"/></svg><div class="tag2 sans">VERSTAPPEN WINS</div></div>
+    <div class="num sans">6 <span class="loc">LAS VEGAS &middot; FORMULA 1</span><span class="cert">REPORTED</span></div>
+    <h3>Verstappen takes the Las Vegas Grand Prix</h3>
+    <p>From pole in 1:27:39.624; Norris +0.639, Piastri +1.529. (FIA)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#31435f"/><rect y="30" width="235" height="7" fill="#22304a"/><rect x="150" y="6" width="52" height="4" fill="#e9e2cd"/><line x1="176" y1="10" x2="176" y2="16" stroke="#e9e2cd" stroke-width="2"/><ellipse cx="176" cy="19" rx="11" ry="3" fill="none" stroke="#e2703a" stroke-width="2.4"/><path d="M168 22 v6 M176 23 v6 M184 22 v6" stroke="#e9e2cd" stroke-width="1.4"/><circle cx="96" cy="14" r="8" fill="#e2703a"/><path d="M89 8 a8 8 0 0 1 14 0 M90 21 a8 8 0 0 0 12 0" stroke="#8a3f14" stroke-width="1.4" fill="none"/></svg><div class="tag2 sans">50 POINTS</div></div>
+    <div class="num sans">7 <span class="loc">SAN ANTONIO &middot; NBA</span><span class="cert">REPORTED</span></div>
+    <h3>Wembanyama scores 50 as the Spurs roll on</h3>
+    <p>50 pts, 19 rebounds, 5 blocks; 114&ndash;91 over New Orleans. (Reuters)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#9db8c6"/><rect y="24" width="235" height="13" fill="#4d7186"/><path d="M70 24 l8 -6 h64 l8 6 Z" fill="#5c5348"/><rect x="96" y="10" width="30" height="8" fill="#6e6252"/><g fill="#e2703a"><path d="M104 10 q4 -7 2 -11 q7 5 5 11 Z"/></g><g fill="#3a3627" opacity="0.5"><ellipse cx="112" cy="2" rx="10" ry="3"/></g><path d="M20 30 q6 -3 12 0 t12 0 t12 0 M150 32 q6 -3 12 0 t12 0 t12 0" stroke="#dcebf2" stroke-width="1.6" fill="none"/></svg><div class="tag2 sans">SHIP ABLAZE</div></div>
+    <div class="num sans">8 <span class="loc">GULF OF FINLAND &middot; SEA</span><span class="cert">REPORTED</span></div>
+    <h3>Russian cargo ship Sparta II still burning</h3>
+    <p>Hit by drones Saturday; Finland leads the Lovisa rescue. (Reuters)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#2c2c38"/><g stroke="#6b6b7d" stroke-width="2.4"><line x1="60" y1="4" x2="60" y2="33"/><line x1="42" y1="10" x2="78" y2="10"/><line x1="46" y1="17" x2="74" y2="17"/></g><g stroke="#454552" stroke-width="1.2"><line x1="42" y1="10" x2="20" y2="20"/><line x1="78" y1="10" x2="104" y2="18"/></g><g fill="#17171f"><rect x="130" y="18" width="26" height="15"/><rect x="164" y="14" width="30" height="19"/></g><rect x="138" y="23" width="6" height="6" fill="#f0b429"/><rect x="172" y="20" width="6" height="6" fill="#3d3d4d"/><rect x="182" y="26" width="6" height="6" fill="#3d3d4d"/></svg><div class="tag2 sans">POWER CUTS</div></div>
+    <div class="num sans">9 <span class="loc">TEHRAN, IRAN &middot; ENERGY</span><span class="cert">REPORTED</span></div>
+    <h3>Iran begins rationing electricity</h3>
+    <p>Rolling cuts up to two hours a day as war damage bites. (Wires)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#e6ecf2"/><rect x="24" y="8" width="70" height="24" fill="#fdfcf6" stroke="#b9c6d2"/><rect x="52" y="2" width="14" height="10" fill="#b3202c"/><rect x="56" y="4" width="6" height="6" fill="#fdfcf6"/><path d="M120 20 h16 l4 -8 l6 16 l4 -8 h30" stroke="#b3202c" stroke-width="2.2" fill="none"/></svg><div class="tag2 sans">IN INTENSIVE CARE</div></div>
+    <div class="num sans">10 <span class="loc">BRAS&Iacute;LIA, BRAZIL &middot; HEALTH</span><span class="cert">REPORTED</span></div>
+    <h3>Bolsonaro in intensive care in Bras&iacute;lia</h3>
+    <p>Acute bowel obstruction, stable; surgery possible. (Reuters)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#22304a"/><path d="M50 5 l22 6 v12 c0 8 -10 12 -22 15 c-12 -3 -22 -7 -22 -15 v-12 Z" fill="#31597f" stroke="#e9e2cd" stroke-width="1.6"/><circle cx="150" cy="16" r="9" fill="none" stroke="#f0b429" stroke-width="3"/><line x1="157" y1="22" x2="168" y2="31" stroke="#f0b429" stroke-width="3.4"/></svg><div class="tag2 sans">FBI PROBE</div></div>
+    <div class="num sans">11 <span class="loc">WASHINGTON &middot; CYBER</span><span class="cert">REPORTED</span></div>
+    <h3>FBI probes apparent hack of its crime database</h3>
+    <p>Washington State pauses gun-dealer checks; breach assessed. (AP)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#bcd3e8"/><rect y="30" width="235" height="7" fill="#7d99b5"/><rect x="180" y="8" width="10" height="22" fill="#5c5348"/><rect x="176" y="5" width="18" height="5" fill="#b3202c"/><path d="M30 22 l60 -10 l34 6 l-4 6 l-30 -2 l-14 8 h-8 l6 -9 l-30 6 Z" fill="#fdfcf6" stroke="#31597f"/><g stroke="#8a2f2a" stroke-width="2.6"><line x1="30" y1="6" x2="52" y2="26"/><line x1="52" y1="6" x2="30" y2="26"/></g></svg><div class="tag2 sans">FLIGHTS GROUNDED</div></div>
+    <div class="num sans">12 <span class="loc">BRUSSELS &middot; TRAVEL</span><span class="cert">REPORTED</span></div>
+    <h3>Belgian controllers join Monday&rsquo;s national strike</h3>
+    <p>Most flights grounded; controllers walk out. (Wires)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#3d3436"/><g><rect x="46" y="12" width="12" height="20" fill="#7a4a21"/><rect x="50" y="6" width="4" height="6" fill="#c9c0a6"/><rect x="76" y="14" width="12" height="18" fill="#5d6e46"/><rect x="80" y="8" width="4" height="6" fill="#c9c0a6"/><rect x="106" y="12" width="12" height="20" fill="#7a4a21"/><rect x="110" y="6" width="4" height="6" fill="#c9c0a6"/></g><g stroke="#b3202c" stroke-width="2.6"><line x1="140" y1="8" x2="164" y2="30"/><line x1="164" y1="8" x2="140" y2="30"/></g><text x="196" y="26" font-family="DejaVu Sans, Arial" font-weight="bold" font-size="13" fill="#f0b429">19</text></svg><div class="tag2 sans">TOLL AT 19</div></div>
+    <div class="num sans">13 <span class="loc">MANIPUR, INDIA &middot; POISONING</span><span class="cert">REPORTED</span></div>
+    <h3>Toxic-liquor toll in Manipur climbs to 19</h3>
+    <p>600 in hospital, six held; toll up from 16 on Saturday. (Xinhua)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#4a3a30"/><rect x="30" y="14" width="90" height="18" fill="#6e6252"/><rect x="44" y="6" width="12" height="10" fill="#5c5348"/><g fill="#e2703a"><path d="M56 14 q6 -12 3 -20 q11 8 8 20 Z"/><path d="M84 14 q5 -9 2 -15 q8 6 6 15 Z"/></g><g fill="#f0b429"><path d="M62 14 q3 -6 1 -10 q6 4 4 10 Z"/></g><g fill="#2c2118" opacity="0.6"><ellipse cx="66" cy="2" rx="14" ry="3.4"/><ellipse cx="96" cy="0" rx="10" ry="3"/></g></svg><div class="tag2 sans">3 DEAD, 36 MISSING</div></div>
+    <div class="num sans">14 <span class="loc">CIKANDE, INDONESIA &middot; FIRE</span><span class="cert">REPORTED</span></div>
+    <h3>Candy-factory fire in Cikande: 3 dead, 36 missing</h3>
+    <p>Blaze tore through the Banten plant; search goes on. (Detiknews)</p>
+  </div>
+  <div class="panel">
+    <div class="scene"><svg width="235" height="29" viewBox="0 4 235 29"><rect width="235" height="37" fill="#d8cfc0"/><rect y="29" width="235" height="8" fill="#a08b6d"/><g><rect x="60" y="12" width="52" height="17" fill="#b0a58e"/><path d="M56 12 l30 -9 l30 9 Z" fill="#8a5a3a"/><path d="M84 12 l-3 8 l5 4 l-3 5" stroke="#4a3a30" stroke-width="2.2" fill="none"/><rect x="94" y="19" width="8" height="10" fill="#5c4a38"/></g><path d="M140 30 l10 -6 l8 4 l10 -8" stroke="#8a2f2a" stroke-width="2" fill="none"/></svg><div class="tag2 sans">1 DEAD, 16 HURT</div></div>
+    <div class="num sans">15 <span class="loc">JUN&Iacute;N, PERU &middot; QUAKE TOLL</span><span class="cert">REPORTED</span></div>
+    <h3>Peru quake toll updated: 1 dead, 16 hurt</h3>
+    <p>170 homes damaged in Jun&iacute;n; the count is completed. (Reuters)</p>
+  </div>
+</div>
+
+<div class="bottom">
+  <div class="mapbox">
+    <h4 class="sans">WHERE IT HAPPENED <span>numbered pins = the 15 drawn stories</span></h4>
+    <canvas id="wmap" width="342" height="118"></canvas>
+    <div class="datecheck"><b class="sans">DATE CHECK</b><span>Every story is dated Sunday 22 November 2026. Left out: Saturday&rsquo;s first COP31 drafts, the Sparta II hit itself (today&rsquo;s story is the fire still burning), and the ATP final &mdash; a forecast, labelled as one.</span></div>
+  </div>
+  <div class="alsobox">
+    <h4 class="sans">ALSO ON SUNDAY 22 NOVEMBER &mdash; 15 MORE STORIES</h4>
+    <div class="also">
+      <p><span class="n">16</span> <span class="rg">GAZA CITY</span> &mdash; Israeli fire kills 3 in a food vehicle, civil defence says. <b>REPORTED</b></p>
+      <p><span class="n">17</span> <span class="rg">KHARTOUM, SUDAN</span> &mdash; Drones strike homes near the capital; army air defences engaged. <b>REPORTED</b></p>
+      <p><span class="n">18</span> <span class="rg">SOUTHERN NIGERIA</span> &mdash; Mourners&rsquo; boat capsizes on a river: 24 dead, 24 rescued.</p>
+      <p><span class="n">19</span> <span class="rg">VATICAN CITY</span> &mdash; Pope Leo XIV hosts 1,300 poor guests at lunch, 10th World Day of the Poor.</p>
+      <p><span class="n">20</span> <span class="rg">FUKUSHIMA, JAPAN</span> &mdash; Snow strands about 1,500 people in a mountain village.</p>
+      <p><span class="n">21</span> <span class="rg">SEOUL</span> &mdash; Education minister&rsquo;s resignation accepted over AI cheating in the college exam.</p>
+      <p><span class="n">22</span> <span class="rg">DELHI</span> &mdash; Nepal PM Balendra Shah lands on his first visit; meets Modi on Monday.</p>
+      <p><span class="n">23</span> <span class="rg">JERUSALEM</span> &mdash; Eisenkot invites Likud to coalition talks.</p>
+      <p><span class="n">24</span> <span class="rg">MIAMI</span> &mdash; Messi&rsquo;s 10-man Inter Miami beat the Crew 3&ndash;0 in the playoff opener.</p>
+      <p><span class="n">25</span> <span class="rg">TURIN</span> &mdash; ATP Finals title match tonight: Zverev v Alcaraz, 17:00 GMT. <b>FORECAST</b></p>
+      <p><span class="n">26</span> <span class="rg">MARKETS</span> &mdash; Bitcoin back above $60,000 after Saturday&rsquo;s $55.1k flush.</p>
+      <p><span class="n">27</span> <span class="rg">WASHINGTON</span> &mdash; Nvidia faces an SEC accounting probe, say reports.</p>
+      <p><span class="n">28</span> <span class="rg">MELBOURNE</span> &mdash; 70 years since the 1956 Olympics opened here.</p>
+      <p><span class="n">29</span> <span class="rg">GAZA TALKS</span> &mdash; Hamas seeks urgent mediator talks. (Al Jazeera)</p>
+      <p><span class="n">30</span> <span class="rg">SYDNEY</span> &mdash; Cummins keeps Australia&rsquo;s Test captaincy for the summer. (ABC)</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer sans"><div><b>SOURCES</b> &nbsp;REUTERS &middot; AP &middot; AFP &middot; BBC &middot; SCMP &middot; ESPN &middot; FIA &middot; XINHUA &middot; AL JAZEERA &middot; KHALEEJ TIMES &middot; DETIKNEWS &middot; ABC</div><div>Certainty labelled per story &middot; Press time Sunday night, Jakarta</div></div>
+
+<script>
+(function(){
+  var SEG = {
+    0:[[10,16],[44,62]], 1:[[8,19],[34,37],[40,64]], 2:[[8,20],[33,39],[40,65]],
+    3:[[9,19],[33,39],[41,63]], 4:[[9,18],[33,38],[42,60]], 5:[[10,17],[34,38],[43,58]],
+    6:[[10,16],[34,37],[44,56],[59,61]], 7:[[11,16],[34,37],[44,54]], 8:[[11,15],[45,52]],
+    9:[[12,14],[46,51]], 10:[[34,39],[46,49],[50,52]], 11:[[34,40],[50,53]],
+    12:[[34,40],[49,55]], 13:[[21,25],[35,40],[50,54]], 14:[[20,26],[35,39]],
+    15:[[20,26],[36,39]], 16:[[21,26],[36,38]], 17:[[21,25],[36,38],[54,59]],
+    18:[[22,25],[53,60]], 19:[[22,24],[54,59]], 20:[[22,24]], 21:[[63,64]], 22:[[63,65]]
+  };
+  var PINS = [
+    [1,42,4],[2,42,8],[3,44,9],[4,56,10],[5,64,22],[6,12,8],[7,15,9],[8,37,2],
+    [9,44,7],[10,25,18],[11,19,7],[12,33,4],[13,52,10],[14,54,16],[15,20,17],
+    [17,40,11],[18,36,13],[19,35,7],[20,60,7],[24,19,10],[28,61,21]
+  ];
+  var c = document.getElementById('wmap'), x = c.getContext('2d');
+  var W = 68, cell = 342 / W;
+  x.fillStyle = '#c2b48f';
+  Object.keys(SEG).forEach(function(r){
+    SEG[r].forEach(function(s){
+      for (var col = s[0]; col <= s[1]; col++){
+        x.beginPath();
+        x.arc(col * cell + cell/2, (+r) * cell + cell/2, 1.15, 0, 7);
+        x.fill();
+      }
+    });
+  });
+  x.textAlign = 'center'; x.textBaseline = 'middle';
+  PINS.forEach(function(p){
+    var px = p[1] * cell + cell/2, py = p[2] * cell + cell/2;
+    x.beginPath(); x.arc(px, py, 5.4, 0, 7); x.fillStyle = '#b3202c'; x.fill();
+    x.lineWidth = 1; x.strokeStyle = '#f8f3e4'; x.stroke();
+    x.fillStyle = '#fff'; x.font = 'bold 6.8px DejaVu Sans, Arial';
+    x.fillText(p[0], px, py + 0.4);
+  });
+})();
+</script>
+</body>
+</html>
